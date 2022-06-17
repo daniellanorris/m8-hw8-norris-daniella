@@ -136,19 +136,25 @@ section.hero > button {
 
 }
 
+@keyframes dabutton {
+  0% {background-color: var(--secondary-color); transform: scale(1) translateY(2px);}
+  25% {transform: scaleX(1.5, 1.5)}
+  100% {background-color: blue; color: white; transform: scale(1.5, 1.5); box-shadow: 5px 10px #5f5151;}
+}
+
 .hero > button:hover {
-  animation-name: dabutton;
+  cursor:pointer;
+  animation-name: dabutton-after;
   animation-duration: 3s;
   animation-direction: alternate;
   animation-delay: 0s;
   animation-iteration-count: infinite;
 }
 
-
-@keyframes dabutton {
-  0% {background-color: var(--secondary-color); transform: scale(1) translateY(2px);}
-  25% {transform: scaleX(1.5, 1.5)}
-  100% {background-color: blue; color: white; transform: scale(1.5, 1.5); box-shadow: 5px 10px #5f5151;}
+@keyframes dabutton-after {
+  0% {background-color: blue; color: white; transform: scale(1.5, 1.5); box-shadow: 5px 10px #5f5151;}
+  25% {transform: scaleX(1.5,1.5)}
+  100% {background-color: var(--secondary-color); transform: scale(1) translateY(2px);}
 }
 main article {
   padding: 48px 96px;
