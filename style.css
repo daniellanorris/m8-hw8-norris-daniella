@@ -144,14 +144,10 @@ section.hero > button {
 
 .hero > button:hover {
   cursor:pointer;
-  animation-name: dabutton-after;
-  animation-duration: 3s;
-  animation-direction: alternate;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
+  animation: 3s ease-in-out 0s infinite dabutton;
 }
 
-@keyframes dabutton-after {
+@keyframes dabutton {
   0% {background-color: blue; color: white; transform: scale(1.5, 1.5); box-shadow: 5px 10px #5f5151;}
   25% {transform: scaleX(1.5,1.5)}
   100% {background-color: var(--secondary-color); transform: scale(1) translateY(2px);}
